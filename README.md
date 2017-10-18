@@ -1,0 +1,2 @@
+# voc2labelx
+转换voc数据集格式为符合labelx系统输入格式的jsonlist
