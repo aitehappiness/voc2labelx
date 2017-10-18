@@ -7,7 +7,7 @@ import sys
 
 def xml2json(xmlname):
     result = {
-        'ops': 'download()',
+        "ops": "download()",
         'type': 'image',
         'label': {'detect': {'general_d': {'bbox': []}}},
         'source_url': ''
@@ -30,10 +30,10 @@ def xml2json(xmlname):
         ymax = str(object.getElementsByTagName('ymax')[0].childNodes[0].data)
         bndbox['class'] = class_name
         bndbox['pts'] = [
-            [xmin, ymin],
-            [xmax, ymin],
-            [xmax, ymax],
-            [xmin, ymax]
+            [float(xmin), float(ymin)],
+            [float(xmax), float(ymin)],
+            [float(xmax), float(ymax)],
+            [float(xmin), float(ymax)]
         ]
         detections.append(bndbox)
     result['label']['detect']['general_d']['bbox'] = detections

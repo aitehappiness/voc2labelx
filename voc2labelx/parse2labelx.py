@@ -32,10 +32,10 @@ def parse2labelx(vocpath, domain, skip_class=''):
             jsonlist.append(label)
 
     if jsonlist:
-        r = '\n'.join([json.dumps(item) for item in jsonlist])
+        r = '\n'.join([str(item) for item in jsonlist])
         jsonlist_name = basename(vocpath)
 
-        with open(jsonlist_name+'.detect.json', 'w+') as f: f.write(r)
+        with open(jsonlist_name+'.detect.json', 'w+') as f:f.write(r)
     else:
         print 'valid annotations empty'
 
