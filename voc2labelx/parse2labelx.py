@@ -19,7 +19,7 @@ def parse2labelx(vocpath, domain, skip_class=''):
 
     for xml in xmllist:
         label = xml2json(join(annotations_path, xml))
-        label['url'] = 'http://%s/%s' % (domain, label['url'])
+        label['url'] = 'http://%s/%s/%s' % (domain, join(basename(vocpath), 'JPEGImages'), label['url'])
 
         skip_item = []
         for item in label['label']['detect']['general_d']['bbox']:
