@@ -32,7 +32,7 @@ def parse2labelx(vocpath, domain, skip_class=''):
             jsonlist.append(label)
 
     if jsonlist:
-        r = '\n'.join([str(item) for item in jsonlist])
+        r = '\n'.join([json.dumps(item) for item in jsonlist])
         jsonlist_name = basename(vocpath)
 
         with open(jsonlist_name+'.detect.json', 'w+') as f:f.write(r)
@@ -52,7 +52,7 @@ def parse_args():
 
     parser.add_argument('--domain',
                         dest='domain',
-                        help='domain & http://domain/imgname should be available',
+                        help='domain & http://domain/vocdirname/JPEGImages/imgname should be available',
                         type=str)
 
     parser.add_argument('--skip',
