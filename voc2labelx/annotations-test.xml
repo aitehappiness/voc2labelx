@@ -1,0 +1,44 @@
+<annotation>
+    <folder>VOC2007</folder>
+    <filename>0000000000000702.jpg</filename>
+    <source>
+        <database>DATABASE</database>
+        <annotation>DATABASE-V0.1</annotation>
+        <image>flickr</image>
+        <flickrid>NULL</flickrid>
+    </source>
+    <owner>
+        <flickrid>NULL</flickrid>
+        <name>Qiniu AtLab</name>
+    </owner>
+    <size>
+        <width>300</width>
+        <height>302</height>
+        <depth>3</depth>
+    </size>
+    <segmented>0</segmented>
+    <object>
+        <name>cat</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>2.12413793103</xmin>
+            <ymin>195.25862069</ymin>
+            <xmax>90.6413793103</xmax>
+            <ymax>300.437931034</ymax>
+        </bndbox>
+    </object>
+    <object>
+        <name>dog</name>
+        <pose>Unspecified</pose>
+        <truncated>0</truncated>
+        <difficult>0</difficult>
+        <bndbox>
+            <xmin>169.511430538</xmin>
+            <ymin>108.824137931</ymin>
+            <xmax>293.160792109</xmax>
+            <ymax>300.95862069</ymax>
+        </bndbox>
+    </object>
+</annotation>
