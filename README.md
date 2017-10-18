@@ -5,7 +5,7 @@
 ### format
 same with voc(2007/2012) datasets
 ```
-<vocpath>
+<vocdirname>
 ├── Annotations
 │   ├── 000000.xml
 │   ├── 000001.xml
@@ -25,17 +25,20 @@ same with voc(2007/2012) datasets
 ```
 
 ### condition
-all following image in \<vocpath\>/JPEGImages should be available
+all following image in \<vocdirname\>/JPEGImages should be available
 ```
-http://domain/000000.jpg
-http://domain/000001.jpg
-http://domain/000002.jpg
+http://<domain>/<vocdirname>/JPEGImages/000000.jpg
+http://<domain>/<vocdirname>/JPEGImages/000001.jpg
+http://<domain>/<vocdirname>/JPEGImages/000002.jpg
 ...
 ```
 
 ### convert voc data to labelx jsonlist
 ```python
 cd <voc2labelx>/voc2labelx
+
+python parse2labelx.py --vocpath /path/to/voc/data --domain domain
+
 python parse2labelx.py --vocpath /path/to/voc/data --domain domain --skip 'skip_label'
 ```
 
